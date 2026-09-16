@@ -1,0 +1,7 @@
+%{
+  "ham": {:hex, :ham, "0.3.2", "02ae195f49970ef667faf9d01bc454fb80909a83d6c775bcac724ca567aeb7b3", [:mix], [], "hexpm", "b71cc684c0e5a3d32b5f94b186770551509e93a9ae44ca1c1a313700f2f6a69a"},
+  "hpax": {:hex, :hpax, "1.0.4", "777de5d433b0fbdc7c418159c8055910faa8047ffdb3d6b31098d2a46cd7685c", [:mix], [], "hexpm", "afc7cb142ebcc2d01ce7816190b98ce5dd49e799111b24249f3443d730f377ca"},
+  "mimic": {:hex, :mimic, "2.4.1", "1f03d78dbfffd19737c24edf1ff7eeec3059a40bd6f004db743093182d6b5915", [:mix], [{:ham, "~> 0.3", [hex: :ham, repo: "hexpm", optional: false]}], "hexpm", "86d8b3947e30862f59fcafe812bca16edf2515810b4e0e16d9d3a864b568392f"},
+  "mint": {:hex, :mint, "1.10.0", "85af3353bfc504f5bdfe494bd92b8490f87a306dc659ee1ad0af435107e898dc", [:mix], [{:castore, "~> 0.1.0 or ~> 1.0", [hex: :castore, repo: "hexpm", optional: true]}, {:hpax, "~> 0.1.1 or ~> 0.2.0 or ~> 1.0", [hex: :hpax, repo: "hexpm", optional: false]}], "hexpm", "8b16fb72aaa7531d206a1f05e4cc85509ba531ccec7a17a22736c9c95cbb24d1"},
+  "mint_web_socket": {:hex, :mint_web_socket, "1.0.6", "5ffcf350df5b90f2d7a04adf877165228804993714592512374218d4679e325a", [:mix], [{:mint, ">= 1.4.1 and < 2.0.0-0", [hex: :mint, repo: "hexpm", optional: false]}], "hexpm", "0c360e9012413f1c115a63532601eb5d63731aab7010949178769760686c1698"},
+}
