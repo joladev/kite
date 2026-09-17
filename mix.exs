@@ -9,7 +9,11 @@ defmodule Kite.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      aliases: aliases()
+      aliases: aliases(),
+      description: "An Elixir atproto Jetstream V2 subscriber library",
+      package: package(),
+      docs: docs(),
+      source_url: "https://github.com/joladev/kite"
     ]
   end
 
@@ -31,13 +35,39 @@ defmodule Kite.MixProject do
   defp deps do
     [
       {:mimic, "~> 2.3", only: :test},
+      {:ex_doc, "~> 0.34", only: :dev},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:mint_web_socket, "~> 1.0"}
     ]
   end
 
   defp aliases do
     [
-      precommit: ["compile --warnings-as-errors", "deps.unlock --unused", "format", "test"]
+      precommit: [
+        "compile --warnings-as-errors",
+        "deps.unlock --unused",
+        "format",
+        "credo --strict",
+        "test"
+      ]
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      links: %{
+        "Tangled" => "https://tangled.org/jola.dev/kite",
+        "GitHub" => "https://github.com/joladev/kite"
+      },
+      files: ~w(lib .formatter.exs mix.exs README.md LICENSE)
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      extras: ["README.md"]
     ]
   end
 end

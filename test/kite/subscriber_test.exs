@@ -2,9 +2,9 @@ defmodule KiteSubscriberTest do
   use ExUnit.Case, async: true
   use Mimic
 
+  alias Kite.Cursorless
   alias Kite.Subscriber
   alias Kite.TestHandler
-  alias Kite.Cursorless
 
   test "connects with the configured filters and delivers a commit" do
     commit = """
