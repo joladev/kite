@@ -1,0 +1,25 @@
+when:
+  - event: ["push", "pull_request"]
+    branch: ["main"]
+
+engine: nixery
+
+dependencies:
+  nixpkgs:
+    - beam29Packages.elixir_1_20
+    - beam29Packages.erlang
+
+steps:
+  - name: setup
+    command: |
+      mix local.hex --force
+      mix local.rebar --force
+      mix deps.get
+  - name: unlock
+    command: mix deps.unlock --all
+  - name: install
+    command: mix deps.get
+  - name: compile
+    command: mix compile --warnings-as-errors
+  - name: test
+    command: mix test --warnings-as-errors
