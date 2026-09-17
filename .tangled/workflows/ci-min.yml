@@ -8,6 +8,11 @@ dependencies:
   nixpkgs:
     - beam27packages.elixir_1_18
     - beam27packages.erlang
+    - cacert
+
+environment:
+  ERL_FLAGS: '-public_key cacerts_path \"/etc/ssl/certs/ca-bundle.crt\"'
+  ELIXIR_ERL_OPTIONS: "+fnu"
 
 steps:
   - name: setup
