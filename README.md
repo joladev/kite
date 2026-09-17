@@ -1,4 +1,4 @@
-# Kite
+# Kite [![Package Version](https://img.shields.io/hexpm/v/kite)](https://hex.pm/packages/kite) [![Hex Docs](https://img.shields.io/badge/hex-docs-pink)](https://hexdocs.pm/kite/)
 
 Kite is an atproto Jetstream V2 subscriber library. Use it to subscribe to a jetstream server and get a live stream of records being created, updated, and deleted on the AT protocol that powers services like Bluesky, Tangled, and Leaflet.
 
