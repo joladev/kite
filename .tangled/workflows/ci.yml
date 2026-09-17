@@ -6,8 +6,8 @@ engine: nixery
 
 dependencies:
   nixpkgs:
-    - beam29Packages.elixir_1_20
-    - beam29Packages.erlang
+    - beam27packages.elixir_1_18
+    - beam27packages.erlang
 
 steps:
   - name: setup
