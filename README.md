@@ -53,7 +53,7 @@ The second argument of `handle_event` is context, which is user defined data pas
 
 The supported options are:
 
-* `endpoint` - *required* - a websocket URL for a jetstream, like "wss://jetstream.us-east.bsky.network" or "wss://jetstream2.fr.hose.cam/".
+* `endpoint` - *required* - a websocket URL for a jetstream, like "wss://jetstream.us-east.bsky.network" or "wss://jetstream.us-west.bsky.network".
 * `collections` - a list of NSID strings representing the resources you're interested in, like `"app.bsky.feed.post"` or `"site.standard.document"`.
 * `kinds` - a list of atoms corresponding to the types of events you want to see, normally just `[:commit]`.
 * `context` - use this to pass anything you want to the `handle_event` callback, it will be passed as the second argument.
@@ -120,3 +120,4 @@ And to demonstrate how to write a handler for it, let's say we want to just prin
 - [ ] Optional zstd compression using OTP 28's `:zstd`
 - [ ] Batch processing
 - [ ] Optional structs for the event metadata for commit, account, etc
+- [ ] Automatic jetstream server failover on 503
